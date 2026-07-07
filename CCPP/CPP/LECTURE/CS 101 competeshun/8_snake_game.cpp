@@ -3,7 +3,7 @@
 #include<windows.h>
 using namespace std;
 bool GO;
-int xs[100],ys[100];
+int xs[100],ys[50];
 int xf,yf;
 int xm=10,ym=20;
 int score;
