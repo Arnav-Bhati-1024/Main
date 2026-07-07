@@ -1,0 +1,1 @@
+I used the resource https://youtu.be/8jLOx1hD3_o?si=50UqbL9XD9rzYQMc to study after completing CS101.
