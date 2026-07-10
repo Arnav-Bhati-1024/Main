@@ -4,13 +4,16 @@
 
 int main()
 {
-	int* d = createDangling();
-	// d now points to memory that is no longer valid (dangling)
-	std::cout << "Dangling pointer value (undefined): " << *d << "\n"; // UB
-
-	int* s = createSafe();
-	std::cout << "Safe pointer value: " << *s << "\n";
-	delete s; // free heap memory
+	// just add if p!=nullptr to avoid dangling pointer
+	int* p {new int(10)};
+	if (p != nullptr) {
+		std::cout << *p << "Cout 1" << std::endl;
+	}
+	delete p;
+	p = nullptr; // set pointer to nullptr after deleting
+	if (p != nullptr) {
+		std::cout << *p << "Cout 2" << std::endl;
+	}
 
 	return 0;
 }
